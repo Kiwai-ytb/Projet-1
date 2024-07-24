@@ -1,15 +1,16 @@
 
 # Importe les différentes bibliotèques requises ou différents modules
-from colorama import Back, Fore, Style, init, deinit
-import time
-import sys
+try:
+    from colorama import Back, Fore, Style, init, deinit
+    init(autoreset=True)
+    import time
+    import sys
+except:
+    print(f"\n[!] Error: Import of modules failed")
+    exit(None)
 
 
-# Initialise les composant de la blibliothèque colorama
-init(autoreset=True)
-
-
-# Ce sont les différentes listes utilisaient dans ce module
+# Ce sont les différentes listes utilisé dans ce module
 list_non = ["non", "Non", "NON", "Non merci", "non merci", "NON MERCI"]
 
 
@@ -33,7 +34,7 @@ def demander_nom_prenom():
             print(f"{Fore.MAGENTA + Style.NORMAL}Garde{Fore.RED} : Mhmm, n'avez vous pas de nom Mr {reponse_nom_prenom} ?{Style.RESET_ALL}")
 
 
-# Définit la demande d'age du joueur
+# Définit la demande d'âge du joueur
 def demander_age():
     age_int = 0
     while age_int == 0:

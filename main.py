@@ -7,7 +7,7 @@ if __name__ == "main":
         init(autoreset=True)
     except:
         print(f"\n[!] Error: Import of modules failed")
-        exit(1)
+        exit(None)
 
 
     # Créer un espace pour plus de visibilité
