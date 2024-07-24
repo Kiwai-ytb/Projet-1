@@ -1,5 +1,3 @@
-
-# Importe les différentes bibliotèques requises ou différents modules
 try:
     from colorama import Back, Fore, Style, init, deinit
     init(autoreset=True)
@@ -10,11 +8,9 @@ except:
     exit(None)
 
 
-# Ce sont les différentes listes utilisé dans ce module
 list_non = ["non", "Non", "NON", "Non merci", "non merci", "NON MERCI"]
 
 
-# Definit une écriture plus réaliste avec du délai entre chaque lettre
 def print_avec_animation(texte, delai=0.1):
     for char in texte:
         sys.stdout.write(char)
@@ -23,7 +19,6 @@ def print_avec_animation(texte, delai=0.1):
     print()
 
 
-# Définit la demande de nom et de prénom du joueur
 def demander_nom_prenom():
     while True:
         reponse_nom_prenom = input(f"   {Fore.CYAN + Style.NORMAL}Nom et Prénom : {Style.RESET_ALL}")
@@ -34,7 +29,6 @@ def demander_nom_prenom():
             print(f"{Fore.MAGENTA + Style.NORMAL}Garde{Fore.RED} : Mhmm, n'avez vous pas de nom Mr {reponse_nom_prenom} ?{Style.RESET_ALL}")
 
 
-# Définit la demande d'âge du joueur
 def demander_age():
     age_int = 0
     while age_int == 0:
@@ -46,7 +40,6 @@ def demander_age():
     return age_int
 
 
-# Définit la demande de natoinalité du joueur
 def demander_nationatlite():
     reponse_demander_nationalite = ""
     while reponse_demander_nationalite == "":
@@ -54,7 +47,6 @@ def demander_nationatlite():
     return reponse_demander_nationalite
 
 
-# Définit la demande de la raison de la venue du joueur
 def demander_raison_venue(reponse_nom_prenom):
     while True:
         reponse_raison_venue = input(f"\n{Fore.MAGENTA + Style.NORMAL}Garde{Style.RESET_ALL} : Puis-je demander la raison de vôtre venue ? ")
@@ -68,7 +60,6 @@ def demander_raison_venue(reponse_nom_prenom):
             print(f"{Fore.RED + Style.NORMAL}Pouvez vous être un peu plus précis svp Mr {reponse_nom_prenom}.{Style.RESET_ALL}")
 
 
-# Définit la première pensée du joueur
 def demander_pensee_une():
     reponse_pensee_une = ""
     while reponse_pensee_une == "":
@@ -84,3 +75,15 @@ def demander_pensee_une():
         else:
             print(f"{Fore.RED + Style.NORMAL}Erreur 404{Style.RESET_ALL} : La réponse entrée n'existe pas.")
     return reponse_pensee_une
+
+
+def demandere_pensee_deux(reponse_pensee_une):
+    reponse_pensee_deux = ""
+    while reponse_pensee_deux == "":
+        if reponse_pensee_une == "1":
+            print(f"{Fore.LIGHTGREEN_EX + Style.NORMAL}Toi{Style.RESET_ALL} : Où suis-je senser aller maintenant.")
+        elif reponse_pensee_une == "2":
+            print(f"{Fore.LIGHTGREEN_EX + Style.NORMAL}Toi{Style.RESET_ALL} : Bon... Il est grand tant de rentré chez moi.")
+        else:
+            print(f"{Fore.RED + Style.NORMAL}[!] Erreur 404{Style.RESET_ALL} : La réponse entrée n'existe pas.")
+    return reponse_pensee_deux

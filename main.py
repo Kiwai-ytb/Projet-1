@@ -1,34 +1,29 @@
 if __name__ == "main":
     
-    # Importe les différentes bibliotèques requises ou différents modules
-    try:
-        import defs
-        from colorama import Back, Fore, Style, init, deinit
-        init(autoreset=True)
-    except:
-        print(f"\n[!] Error: Import of modules failed")
-        exit(None)
+        try:
+            import defs
+            from colorama import Back, Fore, Style, init, deinit
+            init(autoreset=True)
+        except:
+            print(f"\n[!] Error: Import of modules failed")
+            exit(None)
 
 
-    # Créer un espace pour plus de visibilité
-    print("\n")
+        print("\n")
 
 
-    # Permet au joueur de créer son personnage
-    print(f"{Fore.MAGENTA + Style.NORMAL}Garde{Style.RESET_ALL} : Hop hop hop, arrêtez vous içi, avant d'aller plus loin, j'aurais besoin d'une piéce d'identité.\n\n")
+        print(f"{Fore.MAGENTA + Style.NORMAL}Garde{Style.RESET_ALL} : Hop hop hop, arrêtez vous içi, avant d'aller plus loin, j'aurais besoin d'une piéce d'identité.\n\n")
 
-    print("\033[4mPiéce d'identité\033[0m\n")
-    nom_prenom = defs.demander_nom_prenom()
-    age = defs.demander_age()
-    nationalite = defs.demander_nationatlite()
-    raison_venue = defs.demander_raison_venue(nom_prenom)
-    print(f"{Fore.MAGENTA + Style.NORMAL}Garde{Style.RESET_ALL} : Tout me semble bon, vous pouvez passé.\n")
-
-
-    # Appelle la fonction créer dans le module defs appeller pensee_une
-    pensee_une = defs.demander_pensee_une()
+        print("\033[4mPiéce d'identité\033[0m\n")
+        nom_prenom = defs.demander_nom_prenom()
+        age = defs.demander_age()
+        nationalite = defs.demander_nationatlite()
+        raison_venue = defs.demander_raison_venue(nom_prenom)
+        print(f"{Fore.MAGENTA + Style.NORMAL}Garde{Style.RESET_ALL} : Tout me semble bon, vous pouvez passé.\n")
 
 
-        # Créer un espace pour plus de visibilité
-    print("\n")
+        pensee_une = defs.demander_pensee_une()
+
+
+        print("\n")
 
