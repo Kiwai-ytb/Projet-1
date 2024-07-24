@@ -20,8 +20,12 @@ nom_prenom = defs.demander_nom_prenom()
 age = defs.demander_age()
 nationalite = defs.demander_nationatlite()
 raison_venue = defs.demander_raison_venue(nom_prenom)
+print(f"{Fore.MAGENTA + Style.NORMAL}Garde{Style.RESET_ALL} : Tout me semble bon, vous pouvez passé.\n")
 
-print(f"{Fore.MAGENTA + Style.NORMAL}Garde{Style.RESET_ALL} : Tout me semble bon, vous pouvez passé.")
+
+# Appelle la fonction créer dans le module defs appeller pensee_une
+pensee_une = defs.demander_pensee_une()
+
 
 # Créer un espace pour plus de visibilité
 print("\n")
